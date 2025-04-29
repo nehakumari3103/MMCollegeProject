@@ -1,0 +1,3 @@
+Ram  100
+rahim  200
+mohan 300

@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <button onclick=f1()>
+            Get Data</button>
+            <script>
+                function f1(){
+                    let d1=document.getElementById('d1');
+                    let xr=new XMLHttpRequest();
+                    xr.onreadystatechange=function(){
+                        let rt= xr.responseText;
+                        let dt=rt.split('\n');
+                        for(let i=0; i<dt.length;i++){
+                            let fdt=dt[i].split('\t');
+                            for(let j=0; j<fdt.length;j++){
+                                alert(fdt[j]);
+                            }
+                        };
+                        xr.open('GET','data.txt',true);
+                    }
+                }
+            </script>
+    </body>
+</html>
